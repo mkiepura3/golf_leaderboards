@@ -18,7 +18,7 @@
       <% @groupevents.each do |groupevent| %>
       <tr>
         <td><%= groupevent.eventname %></td>
-        <td><%= groupevent.course_id %></td>
+        <td><%= groupevent.course.coursename %></td>
         <td><%= groupevent.date %></td>
         <td>
           <a href="/groupevents/<%= groupevent.id %>" class="btn btn-primary">Show</a>

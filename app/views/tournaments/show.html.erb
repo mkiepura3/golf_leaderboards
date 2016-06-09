@@ -6,10 +6,10 @@
   <div class="col-md-12">
     <dl class="dl-horizontal">
       <dt>Golfer</dt>
-      <dd><%= @tournament.golfer_id %></dd>
+      <dd><%= @tournament.golfer.lastname %>, <%= @tournament.golfer.firstname %></dd>
 
       <dt>Groupevent</dt>
-      <dd><%= @tournament.groupevent_id %></dd>
+      <dd><%= @tournament.groupevent.eventname %></dd>
 
     </dl>
 

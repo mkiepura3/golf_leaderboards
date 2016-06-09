@@ -12,50 +12,16 @@
         <th>Golfer</th>
         <th>Course</th>
         <th>Date</th>
-        <th>Hole1</th>
-        <th>Hole2</th>
-        <th>Hole3</th>
-        <th>Hole4</th>
-        <th>Hole5</th>
-        <th>Hole6</th>
-        <th>Hole7</th>
-        <th>Hole8</th>
-        <th>Hole9</th>
-        <th>Hole10</th>
-        <th>Hole11</th>
-        <th>Hole12</th>
-        <th>Hole13</th>
-        <th>Hole14</th>
-        <th>Hole15</th>
-        <th>Hole16</th>
-        <th>Hole17</th>
-        <th>Hole18</th>
+        <th>Score</th>
         <th>Actions</th>
       </tr>
 
       <% @scores.each do |score| %>
       <tr>
-        <td><%= score.golfer_id %></td>
-        <td><%= score.course_id %></td>
+        <td><%= score.golfer.lastname %>, <%= score.golfer.firstname %></td>
+        <td><%= score.course.coursename %></td>
         <td><%= score.date %></td>
-        <td><%= score.hole1 %></td>
-        <td><%= score.hole2 %></td>
-        <td><%= score.hole3 %></td>
-        <td><%= score.hole4 %></td>
-        <td><%= score.hole5 %></td>
-        <td><%= score.hole6 %></td>
-        <td><%= score.hole7 %></td>
-        <td><%= score.hole8 %></td>
-        <td><%= score.hole9 %></td>
-        <td><%= score.hole10 %></td>
-        <td><%= score.hole11 %></td>
-        <td><%= score.hole12 %></td>
-        <td><%= score.hole13 %></td>
-        <td><%= score.hole14 %></td>
-        <td><%= score.hole15 %></td>
-        <td><%= score.hole16 %></td>
-        <td><%= score.hole17 %></td>
-        <td><%= score.hole18 %></td>
+        <td><%= score.hole1 + score.hole2 + score.hole3 + score.hole4 + score.hole5 + score.hole6 + score.hole7 + score.hole8 + score.hole9 + score.hole10 + score.hole11 + score.hole12 + score.hole13 + score.hole14 + score.hole15 + score.hole16 + score.hole17 + score.hole18 %></td>
         <td>
           <a href="/scores/<%= score.id %>" class="btn btn-primary">Show</a>
           <a href="/scores/<%= score.id %>/edit" class="btn btn-warning">Edit</a>

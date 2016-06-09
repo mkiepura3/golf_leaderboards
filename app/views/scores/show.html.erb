@@ -6,80 +6,103 @@
   <div class="col-md-12">
     <dl class="dl-horizontal">
       <dt>Golfer</dt>
-      <dd><%= @score.golfer_id %></dd>
+      <dd><%= @score.golfer.lastname %>, <%= @score.golfer.firstname %></dd>
 
       <dt>Course</dt>
-      <dd><%= @score.course_id %></dd>
+      <dd><%= @score.course.coursename %></dd>
 
       <dt>Date</dt>
       <dd><%= @score.date %></dd>
-
-      <dt>Hole1</dt>
-      <dd><%= @score.hole1 %></dd>
-
-      <dt>Hole2</dt>
-      <dd><%= @score.hole2 %></dd>
-
-      <dt>Hole3</dt>
-      <dd><%= @score.hole3 %></dd>
-
-      <dt>Hole4</dt>
-      <dd><%= @score.hole4 %></dd>
-
-      <dt>Hole5</dt>
-      <dd><%= @score.hole5 %></dd>
-
-      <dt>Hole6</dt>
-      <dd><%= @score.hole6 %></dd>
-
-      <dt>Hole7</dt>
-      <dd><%= @score.hole7 %></dd>
-
-      <dt>Hole8</dt>
-      <dd><%= @score.hole8 %></dd>
-
-      <dt>Hole9</dt>
-      <dd><%= @score.hole9 %></dd>
-
-      <dt>Hole10</dt>
-      <dd><%= @score.hole10 %></dd>
-
-      <dt>Hole11</dt>
-      <dd><%= @score.hole11 %></dd>
-
-      <dt>Hole12</dt>
-      <dd><%= @score.hole12 %></dd>
-
-      <dt>Hole13</dt>
-      <dd><%= @score.hole13 %></dd>
-
-      <dt>Hole14</dt>
-      <dd><%= @score.hole14 %></dd>
-
-      <dt>Hole15</dt>
-      <dd><%= @score.hole15 %></dd>
-
-      <dt>Hole16</dt>
-      <dd><%= @score.hole16 %></dd>
-
-      <dt>Hole17</dt>
-      <dd><%= @score.hole17 %></dd>
-
-      <dt>Hole18</dt>
-      <dd><%= @score.hole18 %></dd>
-
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/scores" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/scores/<%= @score.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_score/<%= @score.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
-    </div>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Hole #</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>Front 9 Score</th>
+      </tr>
+
+      <tr>
+        <td>Score</td>
+        <td><%= @score.hole1 %></td>
+        <td><%= @score.hole2 %></td>
+        <td><%= @score.hole3 %></td>
+        <td><%= @score.hole4 %></td>
+        <td><%= @score.hole5 %></td>
+        <td><%= @score.hole6 %></td>
+        <td><%= @score.hole7 %></td>
+        <td><%= @score.hole8 %></td>
+        <td><%= @score.hole9 %></td>
+        <td><%= @score.hole1 + @score.hole2 + @score.hole3 + @score.hole4 + @score.hole5 + @score.hole6 + @score.hole7 + @score.hole8 + @score.hole9 %></td>
+      </tr>
+
+      <tr>
+        <th>Hole #</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
+        <th>Back 9 Score</th>
+      </tr>
+
+      <tr>
+        <td>Score</td>
+        <td><%= @score.hole10 %></td>
+        <td><%= @score.hole11 %></td>
+        <td><%= @score.hole12 %></td>
+        <td><%= @score.hole13 %></td>
+        <td><%= @score.hole14 %></td>
+        <td><%= @score.hole15 %></td>
+        <td><%= @score.hole16 %></td>
+        <td><%= @score.hole17 %></td>
+        <td><%= @score.hole18 %></td>
+        <td><%= @score.hole10 + @score.hole11 + @score.hole12 + @score.hole13 + @score.hole14 + @score.hole15 + @score.hole16 + @score.hole17 + @score.hole18 %></td>
+      </tr>
+
+      <tr>
+        <th>Total Score</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><%= @score.hole1 + @score.hole2 + @score.hole3 + @score.hole4 + @score.hole5 + @score.hole6 + @score.hole7 + @score.hole8 + @score.hole9 + @score.hole10 + @score.hole11 + @score.hole12 + @score.hole13 + @score.hole14 + @score.hole15 + @score.hole16 + @score.hole17 + @score.hole18 %></th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="/scores" class="btn btn-primary">Back</a>
+          <a href="/scores/<%= @score.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_score/<%= @score.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

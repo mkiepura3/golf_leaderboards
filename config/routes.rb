@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'scores#index'
+
   # Routes for the Tournament resource:
   # CREATE
   get "/tournaments/new", :controller => "tournaments", :action => "new"
@@ -70,7 +73,7 @@ Rails.application.routes.draw do
   devise_for :golfers
 
 
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -45,167 +45,193 @@
         <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @score.date %>">
       </div>
 
-      <!-- Label and input for hole1 -->
-      <div class="form-group">
-        <label for="hole1" class="control-label">
-          Hole1
-        </label>
+      <table class="table table-striped table-hover">
+        <!-- ROW for FRONT NINE holes -->
+        <tr>
+            <td>
+              <!-- Label and input for hole1 -->
+              <div class="form-group">
+                <label for="hole1" class="control-label">
+                  Hole 1
+                </label>
+                <input type="text" id="hole1" name="hole1" placeholder="Strokes 1" class="form-control" value="<%= @score.hole1 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole1" name="hole1" placeholder="Hole1" class="form-control" value="<%= @score.hole1 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole2 -->
+              <div class="form-group">
+                <label for="hole2" class="control-label">
+                  Hole 2
+                </label>
+                <input type="text" id="hole2" name="hole2" placeholder="Strokes 2" class="form-control" value="<%= @score.hole2 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole2 -->
-      <div class="form-group">
-        <label for="hole2" class="control-label">
-          Hole2
-        </label>
+            <td>
+              <!-- Label and input for hole3 -->
+              <div class="form-group">
+                <label for="hole3" class="control-label">
+                  Hole 3
+                </label>
+                <input type="text" id="hole3" name="hole3" placeholder="Strokes 3" class="form-control" value="<%= @score.hole3 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole2" name="hole2" placeholder="Hole2" class="form-control" value="<%= @score.hole2 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole4 -->
+              <div class="form-group">
+                <label for="hole4" class="control-label">
+                  Hole 4
+                </label>
+                <input type="text" id="hole4" name="hole4" placeholder="Strokes 4" class="form-control" value="<%= @score.hole4 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole3 -->
-      <div class="form-group">
-        <label for="hole3" class="control-label">
-          Hole3
-        </label>
+            <td>
+              <!-- Label and input for hole5 -->
+              <div class="form-group">
+                <label for="hole5" class="control-label">
+                  Hole 5
+                </label>
+                <input type="text" id="hole5" name="hole5" placeholder="Strokes 5" class="form-control" value="<%= @score.hole5 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole3" name="hole3" placeholder="Hole3" class="form-control" value="<%= @score.hole3 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole6 -->
+              <div class="form-group">
+                <label for="hole6" class="control-label">
+                  Hole 6
+                </label>
+                <input type="text" id="hole6" name="hole6" placeholder="Strokes 6" class="form-control" value="<%= @score.hole6 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole4 -->
-      <div class="form-group">
-        <label for="hole4" class="control-label">
-          Hole4
-        </label>
+            <td>
+              <!-- Label and input for hole7 -->
+              <div class="form-group">
+                <label for="hole7" class="control-label">
+                  Hole 7
+                </label>
+                <input type="text" id="hole7" name="hole7" placeholder="Strokes 7" class="form-control" value="<%= @score.hole7 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole4" name="hole4" placeholder="Hole4" class="form-control" value="<%= @score.hole4 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole8 -->
+              <div class="form-group">
+                <label for="hole8" class="control-label">
+                  Hole 8
+                </label>
+                <input type="text" id="hole8" name="hole8" placeholder="Strokes 8" class="form-control" value="<%= @score.hole8 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole5 -->
-      <div class="form-group">
-        <label for="hole5" class="control-label">
-          Hole5
-        </label>
+            <td>
+              <!-- Label and input for hole9 -->
+              <div class="form-group">
+                <label for="hole9" class="control-label">
+                  Hole 9
+                </label>
+                <input type="text" id="hole9" name="hole9" placeholder="Strokes 9" class="form-control" value="<%= @score.hole9 %>">
+              </div>
+            </td>
+        </tr>
 
-        <input type="text" id="hole5" name="hole5" placeholder="Hole5" class="form-control" value="<%= @score.hole5 %>">
-      </div>
+        <!-- ROW for BACK NINE holes -->
+        <tr>
+            <td>
+              <!-- Label and input for hole10 -->
+              <div class="form-group">
+                <label for="hole10" class="control-label">
+                  Hole 10
+                </label>
+                <input type="text" id="hole10" name="hole10" placeholder="Strokes 10" class="form-control" value="<%= @score.hole10 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole6 -->
-      <div class="form-group">
-        <label for="hole6" class="control-label">
-          Hole6
-        </label>
+            <td>
+              <!-- Label and input for hole2 -->
+              <div class="form-group">
+                <label for="hole11" class="control-label">
+                  Hole 11
+                </label>
+                <input type="text" id="hole11" name="hole11" placeholder="Strokes 11" class="form-control" value="<%= @score.hole11 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole6" name="hole6" placeholder="Hole6" class="form-control" value="<%= @score.hole6 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole3 -->
+              <div class="form-group">
+                <label for="hole12" class="control-label">
+                  Hole 12
+                </label>
+                <input type="text" id="hole12" name="hole12" placeholder="Strokes 12" class="form-control" value="<%= @score.hole12 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole7 -->
-      <div class="form-group">
-        <label for="hole7" class="control-label">
-          Hole7
-        </label>
+            <td>
+              <!-- Label and input for hole4 -->
+              <div class="form-group">
+                <label for="hole13" class="control-label">
+                  Hole 13
+                </label>
+                <input type="text" id="hole13" name="hole13" placeholder="Strokes 13" class="form-control" value="<%= @score.hole13 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole7" name="hole7" placeholder="Hole7" class="form-control" value="<%= @score.hole7 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole5 -->
+              <div class="form-group">
+                <label for="hole14" class="control-label">
+                  Hole 14
+                </label>
+                <input type="text" id="hole14" name="hole14" placeholder="Strokes 14" class="form-control" value="<%= @score.hole14 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole8 -->
-      <div class="form-group">
-        <label for="hole8" class="control-label">
-          Hole8
-        </label>
+            <td>
+              <!-- Label and input for hole6 -->
+              <div class="form-group">
+                <label for="hole15" class="control-label">
+                  Hole 15
+                </label>
+                <input type="text" id="hole15" name="hole15" placeholder="Strokes 15" class="form-control" value="<%= @score.hole15 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole8" name="hole8" placeholder="Hole8" class="form-control" value="<%= @score.hole8 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole7 -->
+              <div class="form-group">
+                <label for="hole16" class="control-label">
+                  Hole 16
+                </label>
+                <input type="text" id="hole16" name="hole16" placeholder="Strokes 16" class="form-control" value="<%= @score.hole16 %>">
+              </div>
+            </td>
 
-      <!-- Label and input for hole9 -->
-      <div class="form-group">
-        <label for="hole9" class="control-label">
-          Hole9
-        </label>
+            <td>
+              <!-- Label and input for hole8 -->
+              <div class="form-group">
+                <label for="hole17" class="control-label">
+                  Hole 17
+                </label>
+                <input type="text" id="hole17" name="hole17" placeholder="Strokes 17" class="form-control" value="<%= @score.hole17 %>">
+              </div>
+            </td>
 
-        <input type="text" id="hole9" name="hole9" placeholder="Hole9" class="form-control" value="<%= @score.hole9 %>">
-      </div>
-
-      <!-- Label and input for hole10 -->
-      <div class="form-group">
-        <label for="hole10" class="control-label">
-          Hole10
-        </label>
-
-        <input type="text" id="hole10" name="hole10" placeholder="Hole10" class="form-control" value="<%= @score.hole10 %>">
-      </div>
-
-      <!-- Label and input for hole11 -->
-      <div class="form-group">
-        <label for="hole11" class="control-label">
-          Hole11
-        </label>
-
-        <input type="text" id="hole11" name="hole11" placeholder="Hole11" class="form-control" value="<%= @score.hole11 %>">
-      </div>
-
-      <!-- Label and input for hole12 -->
-      <div class="form-group">
-        <label for="hole12" class="control-label">
-          Hole12
-        </label>
-
-        <input type="text" id="hole12" name="hole12" placeholder="Hole12" class="form-control" value="<%= @score.hole12 %>">
-      </div>
-
-      <!-- Label and input for hole13 -->
-      <div class="form-group">
-        <label for="hole13" class="control-label">
-          Hole13
-        </label>
-
-        <input type="text" id="hole13" name="hole13" placeholder="Hole13" class="form-control" value="<%= @score.hole13 %>">
-      </div>
-
-      <!-- Label and input for hole14 -->
-      <div class="form-group">
-        <label for="hole14" class="control-label">
-          Hole14
-        </label>
-
-        <input type="text" id="hole14" name="hole14" placeholder="Hole14" class="form-control" value="<%= @score.hole14 %>">
-      </div>
-
-      <!-- Label and input for hole15 -->
-      <div class="form-group">
-        <label for="hole15" class="control-label">
-          Hole15
-        </label>
-
-        <input type="text" id="hole15" name="hole15" placeholder="Hole15" class="form-control" value="<%= @score.hole15 %>">
-      </div>
-
-      <!-- Label and input for hole16 -->
-      <div class="form-group">
-        <label for="hole16" class="control-label">
-          Hole16
-        </label>
-
-        <input type="text" id="hole16" name="hole16" placeholder="Hole16" class="form-control" value="<%= @score.hole16 %>">
-      </div>
-
-      <!-- Label and input for hole17 -->
-      <div class="form-group">
-        <label for="hole17" class="control-label">
-          Hole17
-        </label>
-
-        <input type="text" id="hole17" name="hole17" placeholder="Hole17" class="form-control" value="<%= @score.hole17 %>">
-      </div>
-
-      <!-- Label and input for hole18 -->
-      <div class="form-group">
-        <label for="hole18" class="control-label">
-          Hole18
-        </label>
-
-        <input type="text" id="hole18" name="hole18" placeholder="Hole18" class="form-control" value="<%= @score.hole18 %>">
-      </div>
+            <td>
+              <!-- Label and input for hole9 -->
+              <div class="form-group">
+                <label for="hole18" class="control-label">
+                  Hole 18
+                </label>
+                <input type="text" id="hole18" name="hole18" placeholder="Strokes 18" class="form-control" value="<%= @score.hole18 %>">
+              </div>
+            </td>
+        </tr>
+      </table>
 
       <button class="btn btn-success">
         Create Score

@@ -5,78 +5,101 @@
 <div class="row">
   <div class="col-md-12">
     <dl class="dl-horizontal">
-      <dt>Coursename</dt>
+      <dt>Course Name</dt>
       <dd><%= @course.coursename %></dd>
 
       <dt>Yardage</dt>
       <dd><%= @course.yardage %></dd>
-
-      <dt>Parhole1</dt>
-      <dd><%= @course.parhole1 %></dd>
-
-      <dt>Parhole2</dt>
-      <dd><%= @course.parhole2 %></dd>
-
-      <dt>Parhole3</dt>
-      <dd><%= @course.parhole3 %></dd>
-
-      <dt>Parhole4</dt>
-      <dd><%= @course.parhole4 %></dd>
-
-      <dt>Parhole5</dt>
-      <dd><%= @course.parhole5 %></dd>
-
-      <dt>Parhole6</dt>
-      <dd><%= @course.parhole6 %></dd>
-
-      <dt>Parhole7</dt>
-      <dd><%= @course.parhole7 %></dd>
-
-      <dt>Parhole8</dt>
-      <dd><%= @course.parhole8 %></dd>
-
-      <dt>Parhole9</dt>
-      <dd><%= @course.parhole9 %></dd>
-
-      <dt>Parhole10</dt>
-      <dd><%= @course.parhole10 %></dd>
-
-      <dt>Parhole11</dt>
-      <dd><%= @course.parhole11 %></dd>
-
-      <dt>Parhole12</dt>
-      <dd><%= @course.parhole12 %></dd>
-
-      <dt>Parhole13</dt>
-      <dd><%= @course.parhole13 %></dd>
-
-      <dt>Parhole14</dt>
-      <dd><%= @course.parhole14 %></dd>
-
-      <dt>Parhole15</dt>
-      <dd><%= @course.parhole15 %></dd>
-
-      <dt>Parhole16</dt>
-      <dd><%= @course.parhole16 %></dd>
-
-      <dt>Parhole17</dt>
-      <dd><%= @course.parhole17 %></dd>
-
-      <dt>Parhole18</dt>
-      <dd><%= @course.parhole18 %></dd>
-
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/courses" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/courses/<%= @course.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_course/<%= @course.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
-    </div>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Hole #</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>Front 9 Par</th>
+      </tr>
+
+      <tr>
+        <td>Par</td>
+        <td><%= @course.parhole1 %></td>
+        <td><%= @course.parhole2 %></td>
+        <td><%= @course.parhole3 %></td>
+        <td><%= @course.parhole4 %></td>
+        <td><%= @course.parhole5 %></td>
+        <td><%= @course.parhole6 %></td>
+        <td><%= @course.parhole7 %></td>
+        <td><%= @course.parhole8 %></td>
+        <td><%= @course.parhole9 %></td>
+        <td><%= @course.parhole1 + @course.parhole2 + @course.parhole3 + @course.parhole4 + @course.parhole5 + @course.parhole6 + @course.parhole7 + @course.parhole8 + @course.parhole9 %></td>
+      </tr>
+
+      <tr>
+        <th>Hole #</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
+        <th>Back 9 Par</th>
+      </tr>
+
+      <tr>
+        <td>Par</td>
+        <td><%= @course.parhole10 %></td>
+        <td><%= @course.parhole11 %></td>
+        <td><%= @course.parhole12 %></td>
+        <td><%= @course.parhole13 %></td>
+        <td><%= @course.parhole14 %></td>
+        <td><%= @course.parhole15 %></td>
+        <td><%= @course.parhole16 %></td>
+        <td><%= @course.parhole17 %></td>
+        <td><%= @course.parhole18 %></td>
+        <td><%= @course.parhole10 + @course.parhole11 + @course.parhole12 + @course.parhole13 + @course.parhole14 + @course.parhole15 + @course.parhole16 + @course.parhole17 + @course.parhole18 %></td>
+      </tr>
+
+      <tr>
+        <th>Total Course Par</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><%= @course.parhole1 + @course.parhole2 + @course.parhole3 + @course.parhole4 + @course.parhole5 + @course.parhole6 + @course.parhole7 + @course.parhole8 + @course.parhole9 + @course.parhole10 + @course.parhole11 + @course.parhole12 + @course.parhole13 + @course.parhole14 + @course.parhole15 + @course.parhole16 + @course.parhole17 + @course.parhole18 %></th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="/courses" class="btn btn-primary">Back</a>
+          <a href="/courses/<%= @course.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_course/<%= @course.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
