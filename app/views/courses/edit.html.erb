@@ -1,0 +1,208 @@
+<!-- Validation failure messages -->
+<% if @course.errors.any? %>
+  <% @course.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Course #<%= @course.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_course/<%= @course.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for coursename -->
+      <div class="form-group">
+        <label for="coursename" class="control-label">
+          Coursename
+        </label>
+
+        <input type="text" id="coursename" name="coursename" placeholder="Coursename" class="form-control" value="<%= @course.coursename %>">
+      </div>
+
+      <!-- Label and input for yardage -->
+      <div class="form-group">
+        <label for="yardage" class="control-label">
+          Yardage
+        </label>
+
+        <input type="text" id="yardage" name="yardage" placeholder="Yardage" class="form-control" value="<%= @course.yardage %>">
+      </div>
+
+      <!-- Label and input for parhole1 -->
+      <div class="form-group">
+        <label for="parhole1" class="control-label">
+          Parhole1
+        </label>
+
+        <input type="text" id="parhole1" name="parhole1" placeholder="Parhole1" class="form-control" value="<%= @course.parhole1 %>">
+      </div>
+
+      <!-- Label and input for parhole2 -->
+      <div class="form-group">
+        <label for="parhole2" class="control-label">
+          Parhole2
+        </label>
+
+        <input type="text" id="parhole2" name="parhole2" placeholder="Parhole2" class="form-control" value="<%= @course.parhole2 %>">
+      </div>
+
+      <!-- Label and input for parhole3 -->
+      <div class="form-group">
+        <label for="parhole3" class="control-label">
+          Parhole3
+        </label>
+
+        <input type="text" id="parhole3" name="parhole3" placeholder="Parhole3" class="form-control" value="<%= @course.parhole3 %>">
+      </div>
+
+      <!-- Label and input for parhole4 -->
+      <div class="form-group">
+        <label for="parhole4" class="control-label">
+          Parhole4
+        </label>
+
+        <input type="text" id="parhole4" name="parhole4" placeholder="Parhole4" class="form-control" value="<%= @course.parhole4 %>">
+      </div>
+
+      <!-- Label and input for parhole5 -->
+      <div class="form-group">
+        <label for="parhole5" class="control-label">
+          Parhole5
+        </label>
+
+        <input type="text" id="parhole5" name="parhole5" placeholder="Parhole5" class="form-control" value="<%= @course.parhole5 %>">
+      </div>
+
+      <!-- Label and input for parhole6 -->
+      <div class="form-group">
+        <label for="parhole6" class="control-label">
+          Parhole6
+        </label>
+
+        <input type="text" id="parhole6" name="parhole6" placeholder="Parhole6" class="form-control" value="<%= @course.parhole6 %>">
+      </div>
+
+      <!-- Label and input for parhole7 -->
+      <div class="form-group">
+        <label for="parhole7" class="control-label">
+          Parhole7
+        </label>
+
+        <input type="text" id="parhole7" name="parhole7" placeholder="Parhole7" class="form-control" value="<%= @course.parhole7 %>">
+      </div>
+
+      <!-- Label and input for parhole8 -->
+      <div class="form-group">
+        <label for="parhole8" class="control-label">
+          Parhole8
+        </label>
+
+        <input type="text" id="parhole8" name="parhole8" placeholder="Parhole8" class="form-control" value="<%= @course.parhole8 %>">
+      </div>
+
+      <!-- Label and input for parhole9 -->
+      <div class="form-group">
+        <label for="parhole9" class="control-label">
+          Parhole9
+        </label>
+
+        <input type="text" id="parhole9" name="parhole9" placeholder="Parhole9" class="form-control" value="<%= @course.parhole9 %>">
+      </div>
+
+      <!-- Label and input for parhole10 -->
+      <div class="form-group">
+        <label for="parhole10" class="control-label">
+          Parhole10
+        </label>
+
+        <input type="text" id="parhole10" name="parhole10" placeholder="Parhole10" class="form-control" value="<%= @course.parhole10 %>">
+      </div>
+
+      <!-- Label and input for parhole11 -->
+      <div class="form-group">
+        <label for="parhole11" class="control-label">
+          Parhole11
+        </label>
+
+        <input type="text" id="parhole11" name="parhole11" placeholder="Parhole11" class="form-control" value="<%= @course.parhole11 %>">
+      </div>
+
+      <!-- Label and input for parhole12 -->
+      <div class="form-group">
+        <label for="parhole12" class="control-label">
+          Parhole12
+        </label>
+
+        <input type="text" id="parhole12" name="parhole12" placeholder="Parhole12" class="form-control" value="<%= @course.parhole12 %>">
+      </div>
+
+      <!-- Label and input for parhole13 -->
+      <div class="form-group">
+        <label for="parhole13" class="control-label">
+          Parhole13
+        </label>
+
+        <input type="text" id="parhole13" name="parhole13" placeholder="Parhole13" class="form-control" value="<%= @course.parhole13 %>">
+      </div>
+
+      <!-- Label and input for parhole14 -->
+      <div class="form-group">
+        <label for="parhole14" class="control-label">
+          Parhole14
+        </label>
+
+        <input type="text" id="parhole14" name="parhole14" placeholder="Parhole14" class="form-control" value="<%= @course.parhole14 %>">
+      </div>
+
+      <!-- Label and input for parhole15 -->
+      <div class="form-group">
+        <label for="parhole15" class="control-label">
+          Parhole15
+        </label>
+
+        <input type="text" id="parhole15" name="parhole15" placeholder="Parhole15" class="form-control" value="<%= @course.parhole15 %>">
+      </div>
+
+      <!-- Label and input for parhole16 -->
+      <div class="form-group">
+        <label for="parhole16" class="control-label">
+          Parhole16
+        </label>
+
+        <input type="text" id="parhole16" name="parhole16" placeholder="Parhole16" class="form-control" value="<%= @course.parhole16 %>">
+      </div>
+
+      <!-- Label and input for parhole17 -->
+      <div class="form-group">
+        <label for="parhole17" class="control-label">
+          Parhole17
+        </label>
+
+        <input type="text" id="parhole17" name="parhole17" placeholder="Parhole17" class="form-control" value="<%= @course.parhole17 %>">
+      </div>
+
+      <!-- Label and input for parhole18 -->
+      <div class="form-group">
+        <label for="parhole18" class="control-label">
+          Parhole18
+        </label>
+
+        <input type="text" id="parhole18" name="parhole18" placeholder="Parhole18" class="form-control" value="<%= @course.parhole18 %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Course
+      </button>
+      or
+      <a href="/courses/<%= @course.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

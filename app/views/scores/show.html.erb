@@ -1,0 +1,85 @@
+<div class="page-header">
+  <h3>Score #<%= @score.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Golfer</dt>
+      <dd><%= @score.golfer_id %></dd>
+
+      <dt>Course</dt>
+      <dd><%= @score.course_id %></dd>
+
+      <dt>Date</dt>
+      <dd><%= @score.date %></dd>
+
+      <dt>Hole1</dt>
+      <dd><%= @score.hole1 %></dd>
+
+      <dt>Hole2</dt>
+      <dd><%= @score.hole2 %></dd>
+
+      <dt>Hole3</dt>
+      <dd><%= @score.hole3 %></dd>
+
+      <dt>Hole4</dt>
+      <dd><%= @score.hole4 %></dd>
+
+      <dt>Hole5</dt>
+      <dd><%= @score.hole5 %></dd>
+
+      <dt>Hole6</dt>
+      <dd><%= @score.hole6 %></dd>
+
+      <dt>Hole7</dt>
+      <dd><%= @score.hole7 %></dd>
+
+      <dt>Hole8</dt>
+      <dd><%= @score.hole8 %></dd>
+
+      <dt>Hole9</dt>
+      <dd><%= @score.hole9 %></dd>
+
+      <dt>Hole10</dt>
+      <dd><%= @score.hole10 %></dd>
+
+      <dt>Hole11</dt>
+      <dd><%= @score.hole11 %></dd>
+
+      <dt>Hole12</dt>
+      <dd><%= @score.hole12 %></dd>
+
+      <dt>Hole13</dt>
+      <dd><%= @score.hole13 %></dd>
+
+      <dt>Hole14</dt>
+      <dd><%= @score.hole14 %></dd>
+
+      <dt>Hole15</dt>
+      <dd><%= @score.hole15 %></dd>
+
+      <dt>Hole16</dt>
+      <dd><%= @score.hole16 %></dd>
+
+      <dt>Hole17</dt>
+      <dd><%= @score.hole17 %></dd>
+
+      <dt>Hole18</dt>
+      <dd><%= @score.hole18 %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/scores" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/scores/<%= @score.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_score/<%= @score.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

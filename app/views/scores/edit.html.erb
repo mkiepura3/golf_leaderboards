@@ -1,0 +1,217 @@
+<!-- Validation failure messages -->
+<% if @score.errors.any? %>
+  <% @score.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Score #<%= @score.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_score/<%= @score.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for golfer_id -->
+      <div class="form-group">
+        <label for="golfer_id" class="control-label">
+          Golfer
+        </label>
+
+        <input type="text" id="golfer_id" name="golfer_id" placeholder="Golfer" class="form-control" value="<%= @score.golfer_id %>">
+      </div>
+
+      <!-- Label and input for course_id -->
+      <div class="form-group">
+        <label for="course_id" class="control-label">
+          Course
+        </label>
+
+        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @score.course_id %>">
+      </div>
+
+      <!-- Label and input for date -->
+      <div class="form-group">
+        <label for="date" class="control-label">
+          Date
+        </label>
+
+        <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @score.date %>">
+      </div>
+
+      <!-- Label and input for hole1 -->
+      <div class="form-group">
+        <label for="hole1" class="control-label">
+          Hole1
+        </label>
+
+        <input type="text" id="hole1" name="hole1" placeholder="Hole1" class="form-control" value="<%= @score.hole1 %>">
+      </div>
+
+      <!-- Label and input for hole2 -->
+      <div class="form-group">
+        <label for="hole2" class="control-label">
+          Hole2
+        </label>
+
+        <input type="text" id="hole2" name="hole2" placeholder="Hole2" class="form-control" value="<%= @score.hole2 %>">
+      </div>
+
+      <!-- Label and input for hole3 -->
+      <div class="form-group">
+        <label for="hole3" class="control-label">
+          Hole3
+        </label>
+
+        <input type="text" id="hole3" name="hole3" placeholder="Hole3" class="form-control" value="<%= @score.hole3 %>">
+      </div>
+
+      <!-- Label and input for hole4 -->
+      <div class="form-group">
+        <label for="hole4" class="control-label">
+          Hole4
+        </label>
+
+        <input type="text" id="hole4" name="hole4" placeholder="Hole4" class="form-control" value="<%= @score.hole4 %>">
+      </div>
+
+      <!-- Label and input for hole5 -->
+      <div class="form-group">
+        <label for="hole5" class="control-label">
+          Hole5
+        </label>
+
+        <input type="text" id="hole5" name="hole5" placeholder="Hole5" class="form-control" value="<%= @score.hole5 %>">
+      </div>
+
+      <!-- Label and input for hole6 -->
+      <div class="form-group">
+        <label for="hole6" class="control-label">
+          Hole6
+        </label>
+
+        <input type="text" id="hole6" name="hole6" placeholder="Hole6" class="form-control" value="<%= @score.hole6 %>">
+      </div>
+
+      <!-- Label and input for hole7 -->
+      <div class="form-group">
+        <label for="hole7" class="control-label">
+          Hole7
+        </label>
+
+        <input type="text" id="hole7" name="hole7" placeholder="Hole7" class="form-control" value="<%= @score.hole7 %>">
+      </div>
+
+      <!-- Label and input for hole8 -->
+      <div class="form-group">
+        <label for="hole8" class="control-label">
+          Hole8
+        </label>
+
+        <input type="text" id="hole8" name="hole8" placeholder="Hole8" class="form-control" value="<%= @score.hole8 %>">
+      </div>
+
+      <!-- Label and input for hole9 -->
+      <div class="form-group">
+        <label for="hole9" class="control-label">
+          Hole9
+        </label>
+
+        <input type="text" id="hole9" name="hole9" placeholder="Hole9" class="form-control" value="<%= @score.hole9 %>">
+      </div>
+
+      <!-- Label and input for hole10 -->
+      <div class="form-group">
+        <label for="hole10" class="control-label">
+          Hole10
+        </label>
+
+        <input type="text" id="hole10" name="hole10" placeholder="Hole10" class="form-control" value="<%= @score.hole10 %>">
+      </div>
+
+      <!-- Label and input for hole11 -->
+      <div class="form-group">
+        <label for="hole11" class="control-label">
+          Hole11
+        </label>
+
+        <input type="text" id="hole11" name="hole11" placeholder="Hole11" class="form-control" value="<%= @score.hole11 %>">
+      </div>
+
+      <!-- Label and input for hole12 -->
+      <div class="form-group">
+        <label for="hole12" class="control-label">
+          Hole12
+        </label>
+
+        <input type="text" id="hole12" name="hole12" placeholder="Hole12" class="form-control" value="<%= @score.hole12 %>">
+      </div>
+
+      <!-- Label and input for hole13 -->
+      <div class="form-group">
+        <label for="hole13" class="control-label">
+          Hole13
+        </label>
+
+        <input type="text" id="hole13" name="hole13" placeholder="Hole13" class="form-control" value="<%= @score.hole13 %>">
+      </div>
+
+      <!-- Label and input for hole14 -->
+      <div class="form-group">
+        <label for="hole14" class="control-label">
+          Hole14
+        </label>
+
+        <input type="text" id="hole14" name="hole14" placeholder="Hole14" class="form-control" value="<%= @score.hole14 %>">
+      </div>
+
+      <!-- Label and input for hole15 -->
+      <div class="form-group">
+        <label for="hole15" class="control-label">
+          Hole15
+        </label>
+
+        <input type="text" id="hole15" name="hole15" placeholder="Hole15" class="form-control" value="<%= @score.hole15 %>">
+      </div>
+
+      <!-- Label and input for hole16 -->
+      <div class="form-group">
+        <label for="hole16" class="control-label">
+          Hole16
+        </label>
+
+        <input type="text" id="hole16" name="hole16" placeholder="Hole16" class="form-control" value="<%= @score.hole16 %>">
+      </div>
+
+      <!-- Label and input for hole17 -->
+      <div class="form-group">
+        <label for="hole17" class="control-label">
+          Hole17
+        </label>
+
+        <input type="text" id="hole17" name="hole17" placeholder="Hole17" class="form-control" value="<%= @score.hole17 %>">
+      </div>
+
+      <!-- Label and input for hole18 -->
+      <div class="form-group">
+        <label for="hole18" class="control-label">
+          Hole18
+        </label>
+
+        <input type="text" id="hole18" name="hole18" placeholder="Hole18" class="form-control" value="<%= @score.hole18 %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Score
+      </button>
+      or
+      <a href="/scores/<%= @score.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Matt Kiepura added GEM below
 gem 'starter_generators', :git => "http://github.com/raghubetina/starter_generators.git"
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password

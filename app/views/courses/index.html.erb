@@ -1,0 +1,66 @@
+<div class="page-header">
+  <h1>
+    Courses
+    <a href="/courses/new" class="btn btn-lg btn-success">New Course</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Coursename</th>
+        <th>Yardage</th>
+        <th>Parhole1</th>
+        <th>Parhole2</th>
+        <th>Parhole3</th>
+        <th>Parhole4</th>
+        <th>Parhole5</th>
+        <th>Parhole6</th>
+        <th>Parhole7</th>
+        <th>Parhole8</th>
+        <th>Parhole9</th>
+        <th>Parhole10</th>
+        <th>Parhole11</th>
+        <th>Parhole12</th>
+        <th>Parhole13</th>
+        <th>Parhole14</th>
+        <th>Parhole15</th>
+        <th>Parhole16</th>
+        <th>Parhole17</th>
+        <th>Parhole18</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.coursename %></td>
+        <td><%= course.yardage %></td>
+        <td><%= course.parhole1 %></td>
+        <td><%= course.parhole2 %></td>
+        <td><%= course.parhole3 %></td>
+        <td><%= course.parhole4 %></td>
+        <td><%= course.parhole5 %></td>
+        <td><%= course.parhole6 %></td>
+        <td><%= course.parhole7 %></td>
+        <td><%= course.parhole8 %></td>
+        <td><%= course.parhole9 %></td>
+        <td><%= course.parhole10 %></td>
+        <td><%= course.parhole11 %></td>
+        <td><%= course.parhole12 %></td>
+        <td><%= course.parhole13 %></td>
+        <td><%= course.parhole14 %></td>
+        <td><%= course.parhole15 %></td>
+        <td><%= course.parhole16 %></td>
+        <td><%= course.parhole17 %></td>
+        <td><%= course.parhole18 %></td>
+        <td>
+          <a href="/courses/<%= course.id %>" class="btn btn-primary">Show</a>
+          <a href="/courses/<%= course.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_course/<%= course.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
