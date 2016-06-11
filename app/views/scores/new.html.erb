@@ -24,7 +24,8 @@
           Golfer
         </label>
 
-        <input type="text" id="golfer_id" name="golfer_id" placeholder="Golfer" class="form-control" value="<%= @score.golfer_id %>">
+        <%= select_tag(:golfer_id, options_from_collection_for_select(Golfer.order("lastname ASC"), :id, :lastname, @score.golfer_id), :class => "form-control") %>
+        <!-- <input type="text" id="golfer_id" name="golfer_id" placeholder="Golfer" class="form-control" value="<%= @score.golfer_id %>"> -->
       </div>
 
       <!-- Label and input for course_id -->
@@ -33,7 +34,8 @@
           Course
         </label>
 
-        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @score.course_id %>">
+        <%= select_tag(:course_id, options_from_collection_for_select(Course.order("coursename ASC"), :id, :coursename, @score.course_id), :class => "form-control") %>
+        <!-- <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @score.course_id %>"> -->
       </div>
 
       <!-- Label and input for date -->

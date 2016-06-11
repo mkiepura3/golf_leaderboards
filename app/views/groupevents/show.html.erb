@@ -1,31 +1,55 @@
-<div class="page-header">
+<!-- <div class="page-header">
   <h3>Groupevent #<%= @groupevent.id %></h3>
-</div>
+</div> -->
 
 <div class="row">
   <div class="col-md-12">
     <dl class="dl-horizontal">
-      <dt>Eventname</dt>
-      <dd><%= @groupevent.eventname %></dd>
+      <dt><h3>Event:</h3></dt>
+      <dd><h3><%= @groupevent.eventname %></h3></dd>
 
       <dt>Course</dt>
       <dd><%= @groupevent.course.coursename %></dd>
 
       <dt>Date</dt>
       <dd><%= @groupevent.date %></dd>
-
     </dl>
 
+    </br>
+
+    <a href="/tournaments/new" class="btn btn-lg btn-warning">Add Golfer</a>
+
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Golfers</th>
+        <th>Scores</th>
+      </tr>
+
+      <% @groupevent.golfers.each do |golfer| %>
+        <tr>
+          <td><%= golfer.lastname %>, <%= golfer.firstname %></td>
+          <td>
+            <% result = 0
+               golfer.scores.each do |round|
+                if round.date == @groupevent.date && round.course == @groupevent.course
+                  result = round.hole1 + round.hole2 + round.hole3 + round.hole4 + round.hole5 + round.hole6 + round.hole7 + round.hole8 + round.hole9 + round.hole10 + round.hole11 + round.hole12 + round.hole13 + round.hole14 + round.hole15 + round.hole16 + round.hole17 + round.hole18
+                  break
+                else
+                  result = "Score input NEEDED"
+                end
+              end %>
+              <%= result %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
+    </br>
+
     <div class="btn-group btn-group-justified">
-      <a href="/groupevents" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/groupevents/<%= @groupevent.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_groupevent/<%= @groupevent.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+      <a href="/groupevents" class="btn btn-primary">Back</a>
+      <a href="/groupevents/<%= @groupevent.id %>/edit" class="btn btn-warning">Edit</a>
+      <a href="/delete_groupevent/<%= @groupevent.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
     </div>
   </div>
 </div>

@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Groupevent</h3>
+  <h3>New Group Event</h3>
 </div>
 
 <div class="row">
@@ -21,7 +21,7 @@
       <!-- Label and input for eventname -->
       <div class="form-group">
         <label for="eventname" class="control-label">
-          Eventname
+          Event Name
         </label>
 
         <input type="text" id="eventname" name="eventname" placeholder="Eventname" class="form-control" value="<%= @groupevent.eventname %>">
@@ -33,7 +33,7 @@
           Course
         </label>
 
-        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @groupevent.course_id %>">
+        <%= select_tag(:course_id, options_from_collection_for_select(Course.order("coursename ASC"), :id, :coursename, @groupevent.course_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for date -->

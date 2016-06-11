@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Tournament #<%= @tournament.id %></h3>
+  <h3>Edit Registration #<%= @tournament.id %></h3>
 </div>
 
 <div class="row">
@@ -30,14 +30,14 @@
       <!-- Label and input for groupevent_id -->
       <div class="form-group">
         <label for="groupevent_id" class="control-label">
-          Groupevent
+          Group Event
         </label>
 
         <input type="text" id="groupevent_id" name="groupevent_id" placeholder="Groupevent" class="form-control" value="<%= @tournament.groupevent_id %>">
       </div>
 
       <button class="btn btn-warning">
-        Update Tournament
+        Update Registration
       </button>
       or
       <a href="/tournaments/<%= @tournament.id %>">Cancel</a>

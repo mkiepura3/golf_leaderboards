@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Tournament</h3>
+  <h3>Add Golfer (register to Group Event)</h3>
 </div>
 
 <div class="row">
@@ -24,7 +24,8 @@
           Golfer
         </label>
 
-        <input type="text" id="golfer_id" name="golfer_id" placeholder="Golfer" class="form-control" value="<%= @tournament.golfer_id %>">
+        <%= select_tag(:golfer_id, options_from_collection_for_select(Golfer.order("lastname ASC"), :id, :lastname, @tournament.golfer_id), :class => "form-control") %>
+        <!-- <input type="text" id="golfer_id" name="golfer_id" placeholder="Golfer" class="form-control" value="<%= @tournament.golfer_id %>"> -->
       </div>
 
       <!-- Label and input for groupevent_id -->
@@ -33,11 +34,12 @@
           Groupevent
         </label>
 
-        <input type="text" id="groupevent_id" name="groupevent_id" placeholder="Groupevent" class="form-control" value="<%= @tournament.groupevent_id %>">
+        <%= select_tag(:groupevent_id, options_from_collection_for_select(Groupevent.order("date DESC"), :id, :eventname, @tournament.groupevent_id), :class => "form-control") %>
+        <!-- <input type="text" id="groupevent_id" name="groupevent_id" placeholder="Groupevent" class="form-control" value="<%= @tournament.groupevent_id %>"> -->
       </div>
 
       <button class="btn btn-success">
-        Create Tournament
+        Create Registration
       </button>
       or
       <a href="/tournaments">Cancel</a>

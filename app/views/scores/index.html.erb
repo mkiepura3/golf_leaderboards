@@ -16,7 +16,7 @@
         <th>Actions</th>
       </tr>
 
-      <% @scores.each do |score| %>
+      <% @scores.order("date DESC").each do |score| %>
       <tr>
         <td><%= score.golfer.lastname %>, <%= score.golfer.firstname %></td>
         <td><%= score.course.coursename %></td>
